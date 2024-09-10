@@ -6,14 +6,13 @@ var btn = document.getElementById("opnmodal");
 
  
 btn.onclick = function () {
-  document.body.style.overflow='hidden'
     modal.style.display = "flex";
     console.log('slaom');
     
 }
 window.onclick = function (event) {
     if (event.target == modal) {
-      document.body.style.overflow='unset'
+    
         modal.style.display = "none";
     }
 }
