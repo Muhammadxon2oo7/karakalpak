@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+#cart {
+    margin-top: 20px;
+}
+
+#cart-items {
+    margin-bottom: 10px;
+}
+
+
+</style>
+<body>
+    <div id="products">
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Futuristic Holographic Soccer Cleats</h2>
+            <p>39 $</p>
+            <button class="add-to-cart" data-price="39">Savatchaga</button>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Rainbow Glitter High Heels</h2>
+            <p>39 $</p>
+            <button class="add-to-cart" data-price="39">Savatchaga</button>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Chic Summer Denim Espadrille Sandals</h2>
+            <p>33 $</p>
+            <button class="add-to-cart" data-price="33">Savatchaga</button>
+        </div>
+        <!-- 7 ta qolgan mahsulot uchun ham shunday kartalar yaratish kerak -->
+    </div>
+    
+    <div id="cart">
+        <h3>Savatcha</h3>
+        <div id="cart-items"></div>
+        <p id="total-price">Jami: 0 $</p>
+    </div>
+    
+    <script>
+let cart = [];
+let totalPrice = 0;
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', (e) => {
+        let price = parseFloat(e.target.dataset.price);
+        let productName = e.target.parentElement.querySelector('h2').innerText;
+
+        cart.push({ name: productName, price: price });
+        totalPrice += price;
+
+        updateCart();
+    });
+});
+
+function updateCart() {
+    let cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+
+    cart.forEach((product, index) => {
+        cartItems.innerHTML += `<div>${product.name} - ${product.price} $</div>`;
+    });
+
+    document.getElementById('total-price').innerText = `Jami: ${totalPrice} $`;
+}
+
+    </script>
+</body>
+</html>

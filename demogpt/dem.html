@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasm Tanlash Jarayoni</title>
+   
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+
+</style>
+<body>
+    <div class="container">
+        <!-- Sarlavha kiritish qismi -->
+        <div id="titleInputSection">
+            <h1>Tur paketingiz nomini kiriting:</h1>
+            <input type="text" id="userTitle" placeholder="Sarlavha" />
+            <button onclick="startProcess()">Yaratish </button>
+        </div>
+
+        <!-- Jarayon boshlangan qismi -->
+        <div id="processSection" style="display: none;">
+            <h1 id="processTitle"></h1>
+            <div class="stepper">
+                <!-- Bosqichlar -->
+                <div class="step active" data-step="1">
+                    <h2>1. Qaysi mehmon hoanani tanlaysiz ?</h2>
+                    <div class="images">
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?cs=srgb&dl=pexels-pixabay-258154.jpg&fm=jpg" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="2">
+                    <h2>2. Qaysi manzilgohga bormoqchisiz:</h2>
+                    <div class="images">
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?cs=srgb&dl=pexels-pixabay-258154.jpg&fm=jpg" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="3">
+                    <h2>2. Qaysi manzilgohga bormoqchisiz:</h2>
+                    <div class="images">
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?cs=srgb&dl=pexels-pixabay-258154.jpg&fm=jpg" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="4">
+                    <h2>2. Qaysi manzilgohga bormoqchisiz:</h2>
+                    <div class="images">
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?cs=srgb&dl=pexels-pixabay-258154.jpg&fm=jpg" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                        <div class="image" data-price="500" data-name="Rasm 1" onclick="selectImage(this)">
+                            <img src="https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720" alt="qaysidr hotel">
+                            <p>Narxi: $5000</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hisoblash natijasi bosqichi -->
+                <div class="step" data-step="5">
+                    <h2>Hisoblash Natijasi</h2>
+                    <p>Jami narx: <span id="totalPrice">$0</span></p>
+                    <div id="selectedImagesList"></div>
+                </div>
+            </div>
+            <!-- Navigatsiya tugmalari -->
+            <div class="navigation">
+                <button id="prevBtn" onclick="changeStep(-1)">Oldingi</button>
+                <button id="nextBtn" onclick="changeStep(1)" disabled>Keyingi</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+const totalSteps = 5;
+let selectedImages = JSON.parse(localStorage.getItem('selectedImages')) || [];
+let userTitle = '';
+
+// Boshlash funksiyasi
+function startProcess() {
+    const titleInput = document.getElementById('userTitle');
+    userTitle = titleInput.value;
+
+    if (userTitle) {
+        document.getElementById('processTitle').textContent = `Sarlavha: ${userTitle}`;
+        document.getElementById('titleInputSection').style.display = 'none';
+        document.getElementById('processSection').style.display = 'block';
+    } else {
+        alert('Sarlavha kiritilishi shart!');
+    }
+}
+
+// Tanlangan rasmni belgilash va narxni qo'shish
+function selectImage(element) {
+    element.classList.toggle('selected');
+
+    const price = parseInt(element.getAttribute('data-price'));
+    const name = element.getAttribute('data-name');
+    const imgIndex = selectedImages.findIndex(item => item.step === currentStep && item.name === name);
+
+    if (element.classList.contains('selected')) {
+        if (imgIndex === -1) {
+            selectedImages.push({ step: currentStep, price, name });
+        }
+    } else {
+        if (imgIndex !== -1) {
+            selectedImages.splice(imgIndex, 1);
+        }
+    }
+
+    // Tugmani faollashtirish
+    document.getElementById('nextBtn').disabled = selectedImages.filter(item => item.step === currentStep).length === 0;
+}
+
+function showStep(step) {
+    const steps = document.querySelectorAll('.step');
+    steps.forEach((stepElement) => {
+        stepElement.classList.remove('active');
+    });
+    document.querySelector(`.step[data-step="${step}"]`).classList.add('active');
+
+    // Disable "Oldingi" button if on first step
+    document.getElementById('prevBtn').disabled = step === 1;
+
+    // Disable "Keyingi" button if on last step
+    if (step === totalSteps) {
+        document.getElementById('nextBtn').disabled = true;
+        calculateTotalPrice();
+        displaySelectedImages();
+        saveToLocalStorage();
+    } else {
+        document.getElementById('nextBtn').disabled = selectedImages.filter(item => item.step === currentStep).length === 0;
+    }
+}
+
+function changeStep(direction) {
+    currentStep += direction;
+
+    // Save selected images to localStorage
+    localStorage.setItem('selectedImages', JSON.stringify(selectedImages));
+
+    showStep(currentStep);
+}
+
+function calculateTotalPrice() {
+    const totalPrice = selectedImages.reduce((sum, item) => sum + item.price, 0);
+    document.getElementById('totalPrice').textContent = `$${totalPrice}`;
+}
+
+function displaySelectedImages() {
+    const selectedImagesList = document.getElementById('selectedImagesList');
+    selectedImagesList.innerHTML = ''; // Oldingi ma'lumotlarni tozalash
+    selectedImages.forEach(item => {
+        const imageInfo = document.createElement('p');
+        imageInfo.textContent = `Bosqich ${item.step}: ${item.name} - $${item.price}`;
+        selectedImagesList.appendChild(imageInfo);
+    });
+}
+
+function saveToLocalStorage() {
+    const processData = {
+        title: userTitle,
+        images: selectedImages
+    };
+    localStorage.setItem(userTitle, JSON.stringify(processData));
+}
+
+// Display the first
+
+    </script>
+</body>
+</html>

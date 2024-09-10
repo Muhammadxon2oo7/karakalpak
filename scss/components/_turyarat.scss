@@ -1,0 +1,105 @@
+.create__byhand{
+    width: 100%;
+    .tur__modal{
+        display: none;
+    z-index: 100;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+        .modal__content{
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            h2{
+                width: 100%;
+            }
+            .containerr {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                width: auto;
+                text-align: center;
+            }
+            
+            h1 {
+                margin-bottom: 20px;
+            }
+            
+            input {
+                padding: 10px;
+                width: 80%;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            
+            button {
+                padding: 10px 20px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+            button:disabled {
+                background-color: #ccc;
+            }
+            
+            button:hover {
+                background-color: #0056b3;
+            }
+            
+            .step {
+                display: none;
+            }
+            
+            .step.active {
+                display: block;
+            }
+            
+            .images {
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            
+            .image {
+                width: auto;
+                margin: 10px;
+                cursor: pointer;
+            }
+            
+            .image img {
+                width: 100%;
+                min-width: 300px;
+                min-height: 200px;
+                border-radius: 5px;
+            }
+            
+            .image.selected img {
+                border: 3px solid #007BFF;
+            }
+            
+            .navigation {
+                margin-top: 20px;
+            }
+        }
+    }
+}
