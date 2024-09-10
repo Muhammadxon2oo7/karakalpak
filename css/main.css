@@ -478,7 +478,7 @@ header .container .display ul .dropdown:hover .dropdown-content {
   }
   header .container .nav__Wrapper ul li a {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 125%;
     text-transform: uppercase;
     color: #fff;
@@ -538,6 +538,7 @@ header .container .display ul .dropdown:hover .dropdown-content {
     display: block;
     text-align: left;
     color: gray;
+    font-size: 18px;
   }
   header .container .nav__Wrapper ul .dropdown-content a:hover {
     color: #000;
@@ -587,6 +588,10 @@ header .container .display ul .dropdown:hover .dropdown-content {
 }
 
 @media only screen and (min-width: 990px) {
+  .banner {
+    position: relative;
+    inset: 0;
+  }
   .banner .container p {
     font-size: 48px;
     color: #fff;
@@ -595,11 +600,20 @@ header .container .display ul .dropdown:hover .dropdown-content {
     color: #E4C47B;
     z-index: 10;
     position: relative;
-    text-shadow: 1px solid red;
-    font-size: 64px;
+    text-shadow: 1px solid rgb(117, 86, 86);
+    font-size: 84px;
   }
   .banner .container p span {
     font-size: 32px;
+  }
+  .banner .container p::before {
+    width: 100%;
+    display: block;
+    position: absolute;
+    content: " ";
+    background-color: rgba(64, 62, 61, 0.2196078431);
+    left: 0;
+    top: 0;
   }
 }
 .products {

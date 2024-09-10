@@ -47,27 +47,30 @@
 }
 @media only screen and (min-width:990px){
     .banner{
+        position: relative;
+        inset: 0;
         .container{
             p{
                 @include title();
                 color: #E4C47B;
                 z-index: 10;
                 position: relative;
-                text-shadow:1px solid red;
-                font-size: 64px;
-                // &::before{
-                //     content: '';
-                //     display: block;
-                //     position: absolute;
-                //     left: 0;
-                //     width: 100%;
-                //     height: 100%;
-                //     background-color: rgba(72, 72, 72, 0.444);
-                //     border-radius: 12px;
-                // }
+                text-shadow:1px solid rgb(117, 86, 86);
+                font-size: 84px;
+                
                 span{
                     font-size: 32px;
                 }
+                &::before{
+                    width: 100%;
+                    display: block;
+                    position: absolute;
+                    content: ' ' ;
+                    background-color: #403e3d38;
+                    left: 0;
+                    top: 0;
+                }
+
             }
         }
     }
